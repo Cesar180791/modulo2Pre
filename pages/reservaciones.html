@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones</title>
+    <link rel="shortcut icon" href="../img/logos/logoWeb.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./aboutme.html">Acerca de</a>
+            <a href="./reservaciones.html">Reservaciones</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Has tu reservacion YA!!!!</h1>
+            <h2>Turicentro Altos de la Cueva</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #ffffff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Formulario de Reservacion</h2>
+            <div class="contenedor-sobre-nosotros">
+
+
+                <form class="contact_form" action="#" method="post" name="contact_form">
+                    <fieldset>
+                        <legend>check in es a las 3:00PM</legend>
+                        <h2>Datos de Turista</h2>
+                        <div>
+                            <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo" required>
+                        </div>
+                        <span class="form_hint">Formato aceptado "Manuel Reyes"</span>
+                        <div>
+                            <input id="correo" type="email" name="email" placeholder="Direccion de Correo Electronico" required>
+                        </div>
+                        <span class="form_hint">Formato aceptado "Maneul@gmail.com"</span>
+                        <div>
+                            <input id="telefono" type="text" name="numerotel" placeholder="Numero de Telefono" required
+                                pattern="[0-9]{4}-[0-9]{4}" />
+                        </div>
+                        <span class="form_hint">Formato aceptado 2257-7777"</span>
+                        <h5 class="espacio">Numero de Personas</h5>
+                        <div><input id="cantPersonas" type="number" name="numeroper" min="1" max="100"></div>
+                        <h2>Lugar a Visitar</h2>
+                        <div>
+                            <select id="lugarVisitar" class="vaga" name="selectlugar" required>
+                                <option disabled selected>Selecione un Centro Turistico</option>
+                                <option>Altos de la cueva San Miguel</option>
+                                <option>Altos de la cueva Morazan</option>
+                                <option>Altos de la cueva La Union</option>
+                                <option>Altos de la cueva Usulutan</option>
+                                <option>Altos de la cueva Santa Rosa</option>
+                                <option>Altos de la cueva Ciudad Barrios</option>
+                                <option>Altos de la cueva Chirilagua</option>
+                                <option>Altos de la cueva Conchagua</option>
+                            </select>
+                        </div>
+                        <h2>Fecha de Visita <h5>(Sujeta a Disponibilidad)</h5>
+                        </h2>
+                        <div>
+                            <input id="fechaVisita" type="date" id="party" name="party" min="2021-05-01" max="2021-12-31" required>
+                            <span class="validity"></span>
+                        </div>
+                        <h2>Fecha de Salida</h2>
+                        <div>
+                            <input id="fechaSalida" type="date" id="party" name="party" min="2021-05-01" max="2021-12-31" required>
+                            <span class="validity"></span>
+                        </div>
+                        <div>
+                            <input type="submit" name="boton" id="btnReservacion" value="Reservar!" onclick="registrarReservacion()">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono para Consultas y reservaciones</h4>
+                <p>2657-7777</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo Electronico</h4>
+                <p>turismopulgarcito@turicentrocueva.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Direccion</h4>
+                <p>2A Avenida Norte, San Miguel</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; PreEspecializacion Web | Equipo 4</h2>
+    </footer>
+</body>
+ 
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="../js/reservaciones.js"></script>
